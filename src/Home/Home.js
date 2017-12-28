@@ -15,11 +15,15 @@ class Home extends Component {
           <Logo />
         </div>
         <div id="content">
-          <ContentBlock>
+          <ContentBlock title="Welcome">
             <p>I am a software engineering undergraduate student, currently
                 studying Computer Science and Engineering at UCLA. This website
                 is a collection of past and current projects that I am working
                 on, as well as other things that I would like to showcase.</p>
+
+            <br/>
+            <p>This website is continuously under construction, so there may be
+                some elements that are still under being worked on...</p>
           </ContentBlock>
         </div>
         <Footer />

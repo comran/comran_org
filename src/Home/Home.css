@@ -1,6 +1,6 @@
 #Home {
   width: 100%;
-  background: rgba(238, 234, 221);
+  background: #FFFFFF;
   position: absolute;
 }
 
@@ -10,5 +10,5 @@
 }
 
 #content {
-  margin-bottom: 300px;
+  margin-bottom: 400px;
 }

@@ -6,9 +6,9 @@ class ContentBlock extends Component {
     return (
       <div className="ContentBlock">
         <div className="contentBlockWrapper">
-          <div className="contentBlockTitle">
-            <div className="contentBlockTitleWrapper">
-              <p>Welcome</p>
+          <div className="contentBlockTitleWrapper">
+            <div className="contentBlockTitle">
+              <p>{this.props.title}</p>
             </div>
           </div>
           <div className="contentBlockContentWrapper">
