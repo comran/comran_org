@@ -19,7 +19,8 @@ class Logo extends Component {
       background: "url(" + weatherBalloonSrc + ")",
       backgroundSize: "cover",
       backgroundPosition: "center " + this.state.backgroundOffset + "%",
-      backgroundRepeat: "no-repeat"
+      backgroundRepeat: "no-repeat",
+      boxShadow: "0 12px 15px -15px #FF0000"
     };
 
     var titleStyle = {
@@ -28,22 +29,21 @@ class Logo extends Component {
       textAlign: "center",
       fontSize: "10vmin",
       fontWeight: "100",
+      color: "#FFFFFF",
       left: "0",
       right: "0",
       top: "calc(50% + " + this.state.titleOffset + "vmin)",
       marginLeft: "auto",
       marginRight: "auto",
-      textShadow: "0px 0px 20px #333",
+      textShadow: "0px 0px 2vmin #000",
     };
 
     var logoFadeStyle = {
       position: "absolute",
-      top: "33vmin",
+      top: "34vmin",
       width: "100%",
-      height: "7.5vmin",
-      background: "url(" + fadeSrc + ")",
-      backgroundSize: "contain",
-      backgroundPosition: "top"
+      height: "6.1vmin",
+      background: "linear-gradient(rgba(240,240,240,0), rgba(240,240,240,0.8))"
     };
 
     return (

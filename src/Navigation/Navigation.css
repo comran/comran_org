@@ -1,14 +1,14 @@
 .Navigation {
   position: fixed;
   top: 0;
-  left: 10vw;
+  left: 10vmin;
   background: rgba(0, 0, 0, 0.7);
   z-index: 2;
-  padding-top: 0.6vh;
-  padding-left: 1.6vw;
-  padding-right: 1.6vw;
-  padding-bottom: 0.2vh;
-  font-size: 2vw;
+  padding-top: 0.6vmin;
+  padding-left: 1.6vmin;
+  padding-right: 1.6vmin;
+  padding-bottom: 0.2vmin;
+  font-size: 2vmin;
 }
 
 #navigationSelected {
