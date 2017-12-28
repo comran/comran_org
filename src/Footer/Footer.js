@@ -10,15 +10,15 @@ class Footer extends Component {
     var mountainImgStyle = {
       display: "block",
       width: "100%",
-      height: "400px",
+      height: "30vmin",
       background: "url(" + mountainSrc + ")",
-      backgroundSize: "3754px 1276px",
-      backgroundPosition: "center calc(100% + 300px)",
+      backgroundSize: "cover",
+      backgroundPosition: "center 60%",
       backgroundRepeat: "no-repeat"
     };
 
     return (
-      <div id="Footer">
+      <div className="Footer">
         <div id="mountain" style={mountainImgStyle} />
         <div id="footerText">
           <p>&copy; {(new Date().getFullYear())} Comran Morshed</p>

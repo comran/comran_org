@@ -10,8 +10,6 @@ import registerServiceWorker from './registerServiceWorker';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Popper from 'popper.js/dist/esm/popper.min.js';
-
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
 

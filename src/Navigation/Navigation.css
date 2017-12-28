@@ -1,22 +1,22 @@
 .Navigation {
   position: fixed;
   top: 0;
-  left: calc(50% - 600px);
+  left: 10vw;
   background: rgba(0, 0, 0, 0.7);
   z-index: 2;
-  padding: 14px;
+  padding-top: 0.6vh;
+  padding-left: 1.6vw;
+  padding-right: 1.6vw;
+  padding-bottom: 0.2vh;
+  font-size: 2vw;
 }
 
 #navigationSelected {
   color: #FFF;
 }
 
-.Navigation a {
-  font-size: 20px;
-}
-
 .Navigation a+a {
-  margin-left: 18px;
+  margin-left: 1vw;
 }
 
 .Navigation a:visited {

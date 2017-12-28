@@ -17,62 +17,74 @@ class Logo extends Component {
       width: "100%",
       height: "100%",
       background: "url(" + weatherBalloonSrc + ")",
-      backgroundSize: "3024px 1382px",
-      backgroundPosition: "center " + this.state.backgroundOffset + "px",
+      backgroundSize: "cover",
+      backgroundPosition: "center " + this.state.backgroundOffset + "%",
       backgroundRepeat: "no-repeat"
     };
 
     var titleStyle = {
       display: "block",
-      width: "50vw",
-      height: "7vw",
-      background: "url(" + titleSrc + ")",
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
       position: "absolute",
-      left: "0px",
-      right: "0px",
-      top: this.state.titleOffset + "px",
-      bottom: "0px",
+      textAlign: "center",
+      fontSize: "10vmin",
+      fontWeight: "100",
+      left: "0",
+      right: "0",
+      top: "calc(50% + " + this.state.titleOffset + "vmin)",
       marginLeft: "auto",
       marginRight: "auto",
+      textShadow: "0px 0px 20px #333",
     };
 
     var logoFadeStyle = {
       position: "absolute",
-      top: "calc(30vw - 100px)",
+      top: "33vmin",
       width: "100%",
-      height: "100px",
+      height: "7.5vmin",
       background: "url(" + fadeSrc + ")",
+      backgroundSize: "contain",
+      backgroundPosition: "top"
     };
 
     return (
-      <div className="Logo">
+      <div id="Logo">
         <div id="weatherBalloon" style={weatherBalloonImgStyle} />
-        <div id="title" style={titleStyle} />
+        <div id="title" style={titleStyle}>Comran Morshed</div>
         <div id="logoFade" style={logoFadeStyle} />
       </div>
     );
   }
 
   setLogoOffset() {
+    const title = document.getElementById("title");
+    var titleOffset = -1 * title.clientHeight / 2.0;
+    titleOffset += window.scrollY / 2.0;
+    titleOffset /= document.body.clientHeight;
+    titleOffset *= 100;
+
+    var backgroundOffset = window.scrollY / 2.0;
+    backgroundOffset /= document.body.clientHeight;
+    backgroundOffset *= 100;
+    backgroundOffset += 30;
+
     this.setState({
-      titleOffset: 200 + window.scrollY / 2.0,
-      backgroundOffset: -200 - 1 * window.scrollY / 2.5,
+      titleOffset: titleOffset,
+      backgroundOffset: backgroundOffset,
     });
   }
 
   componentDidMount() {
-    console.log("MOUNT");
     this.setLogoOffset();
-    window.addEventListener('scroll', this.handleScroll.bind(this));
+    window.addEventListener('scroll', this.handleWindowChange.bind(this));
+    window.addEventListener('resize', this.handleWindowChange.bind(this));
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('scroll', this.handleWindowChange);
+    window.removeEventListener('resize', this.handleWindowChange);
   }
 
-  handleScroll(event) {
+  handleWindowChange(event) {
     this.setLogoOffset();
   }
 }
