@@ -1,0 +1,39 @@
+.Navigation {
+  position: fixed;
+  top: 0;
+  left: 10%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  padding: 14px;
+}
+
+#navigationSelected {
+  color: #FFF;
+}
+
+.Navigation a {
+  font-size: 20px;
+}
+
+.Navigation a+a {
+  margin-left: 18px;
+}
+
+.Navigation a:visited {
+  color: #999;
+  text-decoration: none;
+}
+
+.Navigation a:hover {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.Navigation a:active {
+  color: #FFF;
+  text-decoration: none;
+}
+.Navigation a:link {
+  color: #FFF;
+  text-decoration: none;
+}

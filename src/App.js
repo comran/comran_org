@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import io from 'socket.io-client/dist/socket.io.js';
 
 import Home from './Home/Home';
 import Images from './images/Images.js';
@@ -10,14 +9,6 @@ class App extends Component {
     super(props);
     this.state = {
       optionSelected: 'Home', // Default is Home
-      droneArmedStatus: "Offline",
-      droneState: "",
-      telemetry: null,
-      interopBtnText: "Connect to Interop",
-      interopBtnEnabled: true,
-      moving_obstacles: [],
-      stationary_obstacles: [],
-      missions: []
     };
   }
 
@@ -30,14 +21,9 @@ class App extends Component {
       case "Home":
       default:
         return (
-          <Home appState={this.state}
-                socketEmit={this.socketEmit}/>
+          <Home />
         );
     }
-  }
-
-  setAppState = (newState) => {
-    this.setState(newState);
   }
 
   render() {
@@ -46,9 +32,6 @@ class App extends Component {
         {this.renderSelection()}
       </div>
     );
-  }
-
-  componentDidMount() {
   }
 }
 
