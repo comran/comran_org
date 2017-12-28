@@ -24,10 +24,10 @@ class Logo extends Component {
 
     var titleStyle = {
       display: "block",
-      width: "800px",
-      height: "200px",
+      width: "50vw",
+      height: "7vw",
       background: "url(" + titleSrc + ")",
-      backgroundSize: "800px 100px",
+      backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
       position: "absolute",
       left: "0px",
@@ -40,7 +40,7 @@ class Logo extends Component {
 
     var logoFadeStyle = {
       position: "absolute",
-      top: "400px",
+      top: "calc(30vw - 100px)",
       width: "100%",
       height: "100px",
       background: "url(" + fadeSrc + ")",

@@ -1,7 +1,10 @@
 #Home {
   width: 100%;
+  height: calc(100%);
   background: #FFFFFF;
   position: absolute;
+  display: flex;
+  flex-direction: column;
 }
 
 #top {
@@ -10,5 +13,9 @@
 }
 
 #content {
-  margin-bottom: 400px;
+  flex: 1;
+}
+
+#footer {
+  height: 30vw;
 }
