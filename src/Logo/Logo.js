@@ -58,7 +58,7 @@ class Logo extends Component {
   setLogoOffset() {
     this.setState({
       titleOffset: 200 + window.scrollY / 2.0,
-      backgroundOffset: -200 - 1 * window.scrollY / 6.0,
+      backgroundOffset: -200 - 1 * window.scrollY / 2.5,
     });
   }
 
