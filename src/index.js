@@ -10,15 +10,7 @@ import registerServiceWorker from './registerServiceWorker';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import jquery from 'jquery';
 import Popper from 'popper.js/dist/esm/popper.min.js';
-
-import tether from 'react-tether'
-
-window.jQuery = jquery
-window.Tether = tether
-
-require('bootstrap/dist/js/bootstrap.min.js');
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

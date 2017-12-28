@@ -1,13 +1,11 @@
 {
-  "name": "client",
+  "name": "comran_org",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
-    "bootstrap-sass-loader": "^1.0.10",
+    "bootstrap-loader": "^1.0.10",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.2.1",
-    "popper.js": "^1.12.9",
     "react": "^16.2.0",
     "react-bootstrap": "^0.31.5",
     "react-dom": "^16.2.0",
@@ -19,7 +17,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "deploy": "PORT=80 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
