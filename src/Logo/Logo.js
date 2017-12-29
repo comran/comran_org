@@ -12,53 +12,30 @@ class Logo extends Component {
   }
 
   render() {
-    var weatherBalloonImgStyle = {
-      display: "block",
-      width: "100%",
-      height: "100%",
+    var backgroundImgStyle = {
       background: "url(" + weatherBalloonSrc + ")",
-      backgroundSize: "cover",
       backgroundPosition: "center " + this.state.backgroundOffset + "%",
-      backgroundRepeat: "no-repeat",
-      boxShadow: "0 12px 15px -15px #FF0000"
+      backgroundSize: "cover",
+      filter: "grayscale(" + this.state.titleGrayscale + "%)",
     };
 
-    var titleStyle = {
-      display: "block",
-      position: "absolute",
-      textAlign: "center",
-      fontSize: "10vmin",
-      fontWeight: "100",
-      color: "#FFFFFF",
-      left: "0",
-      right: "0",
-      top: "calc(50% + " + this.state.titleOffset + "vmin)",
-      marginLeft: "auto",
-      marginRight: "auto",
-      textShadow: "0px 0px 2vmin #000",
-    };
-
-    var logoFadeStyle = {
-      position: "absolute",
-      top: "34vmin",
-      width: "100%",
-      height: "6.1vmin",
-      background: "linear-gradient(rgba(240,240,240,0), rgba(240,240,240,0.8))"
+    var logoTitleStyle = {
+      top: this.state.titleOffset + "vh",
+      bottom: (-1 * this.state.titleOffset) + "vh",
     };
 
     return (
-      <div id="Logo">
-        <div id="weatherBalloon" style={weatherBalloonImgStyle} />
-        <div id="title" style={titleStyle}>Comran Morshed</div>
-        <div id="logoFade" style={logoFadeStyle} />
+      <div className="Logo">
+        <div className="LogoBackgroundImg" style={backgroundImgStyle} />
+        <div className="LogoTitle" style={logoTitleStyle}>Comran Morshed</div>
+        <div className="LogoFade" />
       </div>
     );
   }
 
   setLogoOffset() {
     const title = document.getElementById("title");
-    var titleOffset = -1 * title.clientHeight / 2.0;
-    titleOffset += window.scrollY / 2.0;
+    var titleOffset = window.scrollY / 2.0;
     titleOffset /= document.body.clientHeight;
     titleOffset *= 100;
 
@@ -71,6 +48,8 @@ class Logo extends Component {
       titleOffset: titleOffset,
       backgroundOffset: backgroundOffset,
     });
+
+    this.state.titleGrayscale = Math.min(window.scrollY / 2.0, 100.0)
   }
 
   componentDidMount() {

@@ -1,10 +1,13 @@
 .ContentBlock {
   width: 100%;
-  min-height: 10vh;
+  min-height: 40vh;
   padding: 1vw;
-  margin-top: 3vh;
-  margin-bottom: 3vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contentBlockWrapper {
@@ -16,36 +19,11 @@
   overflow: hidden;
 }
 
-.contentBlockTitleWrapper {
-  font-weight: bold;
-  width: 30%;
-  height: 100%;
-  border-right: 2px solid #DDD;
-  float: left;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
-
-.contentBlockTitle {
-  position: absolute;
-  top: calc(50% - 4vw);
-  height: 10vw;
-  right: 1vw;
-  overflow: hidden;
-}
-
-.contentBlockTitleWrapper p {
-  text-align: right;
-  font-size: 6vw;
-}
-
 .contentBlockContentWrapper {
   float: right;
-  width: calc(60% - 1vw);
-}
+  width: 100%;
 
-.contentBlockContent p {
-  margin: 0;
-  font-size: 1.7vw;
+  font-size: 4vmin;
+  line-height: 5vmin;
+  text-align: center;
 }
