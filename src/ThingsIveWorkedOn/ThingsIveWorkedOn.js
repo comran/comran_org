@@ -25,6 +25,7 @@ class ThingsIveWorkedOn extends Component {
           <tr>
             <td>
               <h1>Unmanned Aerial Systems</h1>
+              <h2>Software Lead (2017 - Present)</h2>
             </td>
             <td>
               <div className="DisplayContainer">
@@ -56,27 +57,14 @@ class ThingsIveWorkedOn extends Component {
             </td>
             <td>
               <h1>Drone Swarms</h1>
+              <h2>2017 Summer Internship</h2>
             </td>
           </tr>
           <tr>
             <td>
-              <h1>Robots</h1>
+              <h1>Weather Balloons</h1>
+              <h2>Software and Electronics Lead</h2>
             </td>
-            <td>
-              <div className="DisplayContainer">
-                <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/CMX4ynSQsyI?rel=0"
-                    frameborder="0"
-                    gesture="media"
-                    allow="encrypted-media"
-                    allowfullscreen>
-                </iframe>
-              </div>
-            </td>
-          </tr>
-          <tr>
             <td>
               <div className="DisplayContainer">
                 <iframe
@@ -90,8 +78,24 @@ class ThingsIveWorkedOn extends Component {
                 </iframe>
               </div>
             </td>
+          </tr>
+          <tr>
             <td>
-              <h1>Weather Balloons</h1>
+              <div className="DisplayContainer">
+                <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/CMX4ynSQsyI?rel=0"
+                    frameborder="0"
+                    gesture="media"
+                    allow="encrypted-media"
+                    allowfullscreen>
+                </iframe>
+              </div>
+            </td>
+            <td>
+              <h1>FIRST Robotics Competition</h1>
+              <h2>Team 971 President (2015 - 2016)</h2>
             </td>
           </tr>
         </table>
