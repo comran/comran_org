@@ -57,7 +57,7 @@ class ThingsIveWorkedOn extends Component {
             </td>
             <td>
               <h1>Drone Swarms</h1>
-              <h2>2017 Summer Internship</h2>
+              <h2>Summer Internship (2017)</h2>
             </td>
           </tr>
           <tr>
