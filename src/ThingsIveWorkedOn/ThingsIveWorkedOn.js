@@ -23,6 +23,11 @@ class ThingsIveWorkedOn extends Component {
           colorInvert="true">
         <table className="ThingsIveWorkedOn">
           <tr>
+            <td colspan="2">
+              <p>Major projects</p>
+            </td>
+          </tr>
+          <tr>
             <td>
               <h1>Unmanned Aerial Systems</h1>
               <h2>Software Lead (2017 - Present)</h2>
@@ -96,6 +101,33 @@ class ThingsIveWorkedOn extends Component {
             <td>
               <h1>FIRST Robotics Competition</h1>
               <h2>Team 971 President (2015 - 2016)</h2>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <br/>
+              <p>Other things worth mentioning</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <ul>
+                <li><a href="https://github.com/comran/miranda-dashboard">Car
+                    RPM meter,</a> which interfaces with most modern cars via
+                    the OBD2 diagnostics port</li>
+                <li><a href="https://github.com/comran/cs32/tree/master/project_4">
+                    Turn-by-turn navigator program,</a> implemented in UCLA's
+                    CS32 class using real OpenStreetMap road segment data for
+                    the greater Westwood area in Los Angeles</li>
+                <li><a href="https://github.com/comran/tdx_lights">LED strip
+                    client, server, and web interface</a> for creating light
+                    animations remotely, which is currently being used to
+                    illuminate the outdoor greek letters on UCLA&#39;s Theta
+                    Delta Chi fraternity house at night</li>
+                <li><a href="https://github.com/comran/comran_org">This
+                    website,</a> which was scratch-built in React as a side
+                    project to familiarize myself with the framework</li>
+              </ul>
             </td>
           </tr>
         </table>

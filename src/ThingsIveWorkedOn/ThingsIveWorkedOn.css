@@ -15,17 +15,34 @@
 .ThingsIveWorkedOn h1 {
   font-size: 4em;
   color: #111;
-  font-weight: 700;
 }
 
 .ThingsIveWorkedOn h2 {
   font-size: 1.6em;
-  color: #333;
+  color: #444;
 }
 
 .ThingsIveWorkedOn h3 {
   font-size: 1.8em;
-  color: #555;
+  color: #777;
+}
+
+.ThingsIveWorkedOn p {
+  font-size: 4vmin;
+  font-weight: 700;
+  line-height: 5vmin;
+  text-align: center;
+  width: 100%;
+  border-bottom: 0.4vh solid #111;
+}
+
+.ThingsIveWorkedOn li {
+  font-size: 2.5vmin;
+  margin-top: 2vmin;
+}
+
+.ThingsIveWorkedOn ul {
+  text-align: left;
 }
 
 .DisplayContainer {
