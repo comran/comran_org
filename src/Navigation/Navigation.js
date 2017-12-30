@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import './Navigation.css';
 
-import weatherBalloonSrc from '../images/weather_balloon.jpg';
-import fadeSrc from '../images/fade.png';
-import titleSrc from '../images/title.svg';
-
 class Navigation extends Component {
   render() {
     return (

@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import './Showcase.css';
 
-import weatherBalloonSrc from '../images/weather_balloon.jpg';
-import fadeSrc from '../images/fade.png';
-import titleSrc from '../images/title.svg';
-
 class Showcase extends Component {
   state = {
     titleOffset: 0,
@@ -12,11 +8,20 @@ class Showcase extends Component {
   }
 
   render() {
-    var weatherBalloonImgStyle = {
+    var showcaseStyle = {
+      background: this.props.colorInvert === "true"
+            ? "#F0F0F0"
+            : "#111111",
+      color: this.props.colorInvert === "true"
+            ? "#333"
+            : "#FFF",
+    }
+
+    var backgroundImgStyle = {
       display: "block",
       width: "100%",
       height: "100%",
-      background: "url(" + this.props.imgSrc + ") #222",
+      background: "url(" + this.props.imgSrc + ")",
       backgroundSize: "cover",
       backgroundPosition: "center " + this.state.backgroundOffset + "%",
       backgroundRepeat: "no-repeat",
@@ -38,24 +43,21 @@ class Showcase extends Component {
       textShadow: "0px 0px 2vmin #000",
     };
 
-    var logoFadeCover = {
+    var showcaseFadeCover = {
       position: "absolute",
       top: "0",
       width: "100%",
       height: "100%",
       zIndex: "2",
-      background: "rgba(0,0,0,0.2)"
+      background: "rgba(0,0,0,0.2)",
     };
 
     return (
-      <div className="Showcase">
-        <div className="ShowcaseFadeTop" />
-        <div className="ShowcaseFadeBottomImg" />
-        <div className="ShowcaseFadeBottom" />
-        <div className="ShowcaseImageWrapper">
-          <div style={weatherBalloonImgStyle} />
+      <div className="Showcase" style={showcaseStyle}>
+        <div className="ShowcaseImageWrapper" ref="showcaseImageWrapper">
+          <div style={backgroundImgStyle} />
           <div id="title" style={titleStyle}>{this.props.title}</div>
-          <div id="logoCover" style={logoFadeCover} />
+          <div id="showcaseCover" style={showcaseFadeCover} />
         </div>
         <div className="ShowcaseContent">
           {this.props.children}
@@ -65,6 +67,12 @@ class Showcase extends Component {
   }
 
   setShowcaseOffset() {
+    const showcaseImageWrapperRect = this.refs.showcaseImageWrapper.getBoundingClientRect();
+    if(showcaseImageWrapperRect.top > document.body.clientHeight
+          || showcaseImageWrapperRect.bottom < 0) {
+      return;
+    }
+
     const title = document.getElementById("title");
     var titleOffset = -1 * title.clientHeight / 2.0;
     titleOffset += window.scrollY / 2.0;

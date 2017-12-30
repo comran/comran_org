@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './Footer.css';
 
 import mountainSrc from '../images/mountain_bw.gif';
-import fadeFlippedSrc from '../images/fade_flipped.png';
-import titleSrc from '../images/title.svg';
 
 class Footer extends Component {
   render() {

@@ -1,0 +1,30 @@
+.AboutMe {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.AboutMe h1,h2,h3,h4,h5 {
+  font-weight: 100;
+}
+
+.AboutMe td {
+  padding: 1vw;
+}
+
+.AboutMe h1 {
+  font-size: 4em;
+  color: #111;
+  font-weight: 700;
+  border-bottom: 3px solid #111;
+}
+
+.AboutMe h2 {
+  font-size: 2.6em;
+  color: #333;
+}
+
+.AboutMe h3 {
+  font-size: 1.8em;
+  color: #555;
+}

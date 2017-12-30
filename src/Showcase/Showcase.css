@@ -6,7 +6,6 @@
   display: block;
   clear: both;
   position: relative;
-  background: #111;
   color: #FFF;
   min-height: 100vh;
 }
@@ -30,7 +29,7 @@
   top: 34vh;
   width: 100%;
   height: 6.1vh;
-  z-index: 1;
+  z-index: 4;
   background: linear-gradient(rgba(17,17,17,0), rgba(17,17,17,1.0));
 }
 
@@ -48,32 +47,4 @@
   text-align: center;
   font-size: 1vmin;
   line-height: 3vmin;
-}
-
-.ShowcaseContent h1,h2,h3,h4,h5 {
-  font-weight: 100;
-}
-
-.ShowcaseContent table {
-  width: 100%;
-}
-
-.ShowcaseContent h1 {
-  font-size: 4vh;
-  color: #FFF;
-  font-weight: 700;
-  border-bottom: 3px solid #FFF;
-  width: 25vw;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.ShowcaseContent h2 {
-  font-size: 2.6vh;
-  color: #CCC;
-}
-
-.ShowcaseContent h3 {
-  font-size: 1.8vh;
-  color: #AAA;
 }

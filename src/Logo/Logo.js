@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import './Logo.css';
 
 import weatherBalloonSrc from '../images/weather_balloon.jpg';
-import fadeSrc from '../images/fade.png';
-import titleSrc from '../images/title.svg';
 
 class Logo extends Component {
   state = {
     titleOffset: 0,
-    backgroundOffset: 0
+    backgroundOffset: 0,
+    scrolling: -1
   }
 
   render() {
@@ -25,15 +24,19 @@ class Logo extends Component {
     };
 
     return (
-      <div className="Logo">
+      <div className="Logo" ref="logo">
         <div className="LogoBackgroundImg" style={backgroundImgStyle} />
         <div className="LogoTitle" style={logoTitleStyle}>Comran Morshed</div>
-        <div className="LogoFade" />
       </div>
     );
   }
 
   setLogoOffset() {
+    const logo = this.refs.logo;
+    if(window.scrollY > logo.clientHeight) {
+      return;
+    }
+
     const title = document.getElementById("title");
     var titleOffset = window.scrollY / 2.0;
     titleOffset /= document.body.clientHeight;
@@ -64,6 +67,17 @@ class Logo extends Component {
   }
 
   handleWindowChange(event) {
+    if (this.state.scrolling != -1) {
+      clearTimeout(this.state.scrolling);
+    }
+
+    this.state.scrolling = window.setTimeout(this.endWindowChange.bind(this),
+        100);
+
+    this.setLogoOffset();
+  }
+
+  endWindowChange() {
     this.setLogoOffset();
   }
 }

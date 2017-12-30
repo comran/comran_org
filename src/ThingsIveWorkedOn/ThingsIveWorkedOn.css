@@ -1,0 +1,35 @@
+.ThingsIveWorkedOn {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ThingsIveWorkedOn h1,h2,h3,h4,h5 {
+  font-weight: 100;
+}
+
+.ThingsIveWorkedOn td {
+  padding: 1vw;
+}
+
+.ThingsIveWorkedOn h1 {
+  font-size: 7em;
+  color: #111;
+  font-weight: 700;
+}
+
+.ThingsIveWorkedOn h2 {
+  font-size: 2.6em;
+  color: #333;
+}
+
+.ThingsIveWorkedOn h3 {
+  font-size: 1.8em;
+  color: #555;
+}
+
+.DisplayContainer {
+  width: 50vmin;
+  height: 28.1vmin;
+  border: 0.5vmin solid #111111;
+}
