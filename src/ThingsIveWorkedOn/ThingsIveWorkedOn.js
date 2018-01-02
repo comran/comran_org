@@ -24,7 +24,7 @@ class ThingsIveWorkedOn extends Component {
         <table className="ThingsIveWorkedOn">
           <tr>
             <td colspan="2">
-              <p>Major projects</p>
+              <p>Major Projects</p>
             </td>
           </tr>
           <tr>
@@ -106,7 +106,7 @@ class ThingsIveWorkedOn extends Component {
           <tr>
             <td colspan="2">
               <br/>
-              <p>Other things worth mentioning</p>
+              <p>Other Things Worth Mentioning</p>
             </td>
           </tr>
           <tr>
