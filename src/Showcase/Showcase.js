@@ -32,7 +32,7 @@ class Showcase extends Component {
       position: "absolute",
       textAlign: "center",
       fontSize: "6vmin",
-      fontWeight: "100",
+      fontWeight: "400",
       color: "#FFFFFF",
       left: "0",
       right: "0",
