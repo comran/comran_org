@@ -8,6 +8,7 @@ class Logo extends Component {
     var backgroundImgStyle = {
       background: "url(" + weatherBalloonSrc + ")",
       backgroundSize: "cover",
+      backgroundPosition: "center 30%",
     };
 
     return (
